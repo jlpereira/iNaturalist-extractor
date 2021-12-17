@@ -8,8 +8,7 @@ const {
 
 export const makeRequest = axios.create({
   baseURL: VITE_API_URL,
-  params: {
-    token: VITE_USER_TOKEN,
-    project_id: VITE_PROJECT_ID
+  headers: {
+    Authorization: `Token ${VITE_USER_TOKEN}`
   }
 })
